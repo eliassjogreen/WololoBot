@@ -1,5 +1,11 @@
 require('dotenv').config();
 
+const express = require('express');
+const app = express();
+const path = require('path');
+
+/* Reddit part */
+
 const Snoowrap = require('snoowrap');
 const Snoostorm = require('snoostorm');
 
@@ -21,10 +27,15 @@ const comments = client.CommentStream(streamOpts);
 
 console.log("Listening for Wololo's");
 comments.on('comment', (comment) => {
-    if (comment.body.toLowerCase().includes('wololo') && comment.author.name !== "WololoBot") {
+    if (comment.body.toLowerCase().includes('wololo') && comment.author.name !== process.env.REDDIT_USER) {
         console.log("Wololo detected: ");
         console.log("   Comment: " + comment.body);
         console.log("   Author:  " + comment.author.name);
         comment.reply('[Wololo](http://wololo.se/)\n---\n^(I am a bot | ALL HAIL KING OF THE LOSERS! My creator u/E-Mouse)');
     }
 });
+
+/* Express/website */
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.listen(process.env.PORT || 8080);

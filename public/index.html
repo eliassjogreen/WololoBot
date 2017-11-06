@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>WOLOLO</title>
+    </head>
+    <body style="background: white;">
+        <img src="wololo.png" alt="priest" style="position: absolute; top: 0; bottom:0; left: 0; right:0; margin: auto;"></img>
+        <audio src="wololo.m4a" id="wololo" loop hidden></audio>
+        <audio src="menumusic.m4a" loop hidden autoplay></audio></audio>
+        <footer style="overflow: none; padding: 25px; position: absolute; bottom: 0;">
+            <p>Made with 💖 by <b>EliasSjogreen</b></p>
+            <a href="https://github.com/eliassjogreen/WololoBot">Source code</a>
+            <a href="https://github.com/Tails8521/WololoKingdoms" title="A program for converting AOE2HD expansions files (The Forgotten, African Kingdoms and Rise of the Rajas) to the original AOC engine format.">WololoKingdoms</a>
+            <a href="https://www.reddit.com/r/aoe2/">r/aoe2</a>
+            <a href="https://www.reddit.com/user/E-Mouse/">u/E-Mouse</a>
+            <a href="https://www.reddit.com/user/WololoBot/">u/WololoBot</a>
+        </footer>
+
+        <style>
+            * {
+                font-family: verdana, arial, helvetica, sans-serif;
+                text-decoration: none;
+                margin: 10px;
+            }
+
+            p {
+                color: dimgray;
+            }
+
+            a {
+                color: cornflowerblue;
+            }
+
+            a:hover {
+                text-decoration: underline;
+                color: dimgray;
+            }
+        </style>
+        <script type="text/javascript">
+        document.getElementById('wololo').addEventListener('ended',function () {
+            setTimeout(function(){
+                document.getElementById("wololo").play();
+            }, 500);
+        },false);
+        setTimeout(function(){
+            document.getElementById("wololo").play();
+        }, 4000);
+        </script>
+    </body>
+</html>
