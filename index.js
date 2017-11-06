@@ -31,7 +31,7 @@ comments.on('comment', (comment) => {
         console.log("Wololo detected: ");
         console.log("   Comment: " + comment.body);
         console.log("   Author:  " + comment.author.name);
-        comment.reply('[Wololo](http://wololo.se/)\n---\n^(I am a bot | ALL HAIL KING OF THE LOSERS! My creator u/E-Mouse)');
+        comment.reply('[Wololo](https://wololobot.herokuapp.com/)\n---\n^(I am a bot | ALL HAIL KING OF THE LOSERS! My creator u/E-Mouse)');
     }
 });
 
