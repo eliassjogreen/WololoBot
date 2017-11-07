@@ -8,13 +8,35 @@
         <img src="wololo.png" alt="priest" style="position: absolute; top: 0; bottom:0; left: 0; right:0; margin: auto;"></img>
         <audio src="wololo.m4a" id="wololo" loop hidden></audio>
         <audio src="menumusic.m4a" loop hidden autoplay></audio></audio>
+		<div id="donate" class="overlay">
+			<div class="popup">
+				<h2>Donate</h2>
+				<a class="close" href="#">&times;</a>
+				<div class="content">
+				Donations are appreciated and help keep the spirit up but are in no way necessary! </br></br>
+				
+				BTC:  1Hr9mKtLnq8H1PWeMyViCv15b1iveZ2Bju </br>
+				BCH:  1M14igyfJEukRnLLT6tubyo4PB86qkRzQ2 </br>
+				LTC:  LhN2my2JSjPtB8EQeGtZnM44QaEXKRPRga </br>
+				XRP:  rK9oAXuqBUUjhUnUJ78TiwVFUNMGeshu2B </br>
+				DCR:  DsUnHVk2GpJwSLb79jZRum51rJcLkhWLDvH </br>
+				DASH: XnMz9SbkRbrsLnJqrHzjRrGoXNDjgjJWSQ </br>
+				FCT:  FA3YQeEs8c42phj663Nai31qXifnvCsFVhnkcrA7EwAENapa37NV </br>
+				ETC:  0x4F4040B5341112FC424710C59eaeBFd648C94CDD </br>
+				ETH & Altcoins:  0x4c811436D612ea94Ea451cfaBC42d6BD1153E66a </br></br>
+				
+				Altcoins: WINGS, STORJ, SNT, SALT, QTUM, OMG, MTL, GNT, GNO, FUN, 1ST, EOS, DNT, DGD, CVC, BNT, BAT, REP, ANT, ZRX. </br>
+				</div>
+			</div>
+		</div>
         <footer style="overflow: none; padding: 25px; position: absolute; bottom: 0;">
-            <p>Made with 💖 by <b>EliasSjogreen</b></p>
+            <p>Made with &#x1F496; by <b>EliasSjogreen</b></p>
             <a href="https://github.com/eliassjogreen/WololoBot">Source code</a>
             <a href="https://github.com/Tails8521/WololoKingdoms" title="A program for converting AOE2HD expansions files (The Forgotten, African Kingdoms and Rise of the Rajas) to the original AOC engine format.">WololoKingdoms</a>
             <a href="https://www.reddit.com/r/aoe2/">r/aoe2</a>
             <a href="https://www.reddit.com/user/E-Mouse/">u/E-Mouse</a>
             <a href="https://www.reddit.com/user/WololoBot/">u/WololoBot</a>
+			<a href="#donate">Donate</a>
         </footer>
 
         <style>
@@ -23,13 +45,15 @@
                 text-decoration: none;
                 margin: 10px;
             }
-
+			
             p {
                 color: dimgray;
             }
+			
             b {
                 margin-left: 0px;
             }
+			
             a {
                 color: cornflowerblue;
             }
@@ -38,6 +62,50 @@
                 text-decoration: underline;
                 color: dimgray;
             }
+			
+			.overlay {
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				background: rgba(0, 0, 0, 0.7);
+				transition: opacity 500ms;
+				visibility: hidden;
+				opacity: 0;
+				margin: 0;
+			}
+			
+			.overlay:target {
+				visibility: visible;
+				opacity: 1;
+			}
+			
+			.popup {
+				margin: 70px auto;
+				padding: 20px;
+				background: #fff;
+				border-radius: 5px;
+				width: 70%;
+				position: relative;
+				transition: all 5s ease-in-out;
+			}
+			
+			.popup .close {
+				position: absolute;
+				top: 20px;
+				right: 30px;
+				transition: all 200ms;
+				font-size: 30px;
+				font-weight: bold;
+				text-decoration: none;
+				color: cornflowerblue;
+			}
+			
+			.popup .content {
+				max-height: 30%;
+				overflow: auto;
+			}
         </style>
         <script type="text/javascript">
         document.getElementById('wololo').addEventListener('ended',function () {
